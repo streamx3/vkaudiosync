@@ -16,7 +16,10 @@
 QT += \
     webkit \
     network \
-    xml
+    xml \
+    core \
+    gui \
+    webkitwidgets
 
 TEMPLATE = app
 
@@ -30,7 +33,13 @@ OBJECTS_DIR = build
 
 TRANSLATIONS += \
         translations/main_en.ts \
-        translations/main_ru.ts
+        translations/main_ru.ts \
+        translations/main_uk.ts \
+        translations/main_pl.ts \
+        translations/main_be.ts
+
+CODECFORTR  = UTF-8
+CODECFORSRC = UTF-8
 
 RESOURCES += \
         icons.qrc

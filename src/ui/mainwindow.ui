@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>424</height>
+    <height>427</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -102,14 +102,6 @@
              <height>18</height>
             </size>
            </property>
-           <property name="font">
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>11</pointsize>
-             <weight>50</weight>
-             <bold>false</bold>
-            </font>
-           </property>
            <property name="text">
             <string notr="true"/>
            </property>
@@ -160,7 +152,7 @@
             </property>
             <property name="icon">
              <iconset resource="../icons.qrc">
-              <normaloff>:/famfam/icons/us.png</normaloff>:/famfam/icons/us.png</iconset>
+              <normaloff>:/famfam/icons/gb.png</normaloff>:/famfam/icons/gb.png</iconset>
             </property>
            </item>
            <item>
@@ -174,11 +166,29 @@
            </item>
            <item>
             <property name="text">
-             <string>Украинский</string>
+             <string notr="true">Українська</string>
             </property>
             <property name="icon">
              <iconset resource="../icons.qrc">
               <normaloff>:/famfam/icons/ua.png</normaloff>:/famfam/icons/ua.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Polska</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icons.qrc">
+              <normaloff>:/famfam/icons/pl.png</normaloff>:/famfam/icons/pl.png</iconset>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Беларуская</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../icons.qrc">
+              <normaloff>:/famfam/icons/be.png</normaloff>:/famfam/icons/be.png</iconset>
             </property>
            </item>
           </widget>
@@ -342,10 +352,16 @@
           <item>
            <widget class="QComboBox" name="sorter">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
             </property>
             <item>
              <property name="text">

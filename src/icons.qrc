@@ -12,12 +12,14 @@
         <file>icons/tick.png</file>
         <file>icons/wrench.png</file>
         <file>icons/wrench_orange.png</file>
-        <file>icons/us.png</file>
         <file>icons/ru.png</file>
         <file>icons/ua.png</file>
         <file>icons/key_go.png</file>
         <file>icons/book.png</file>
         <file>icons/folder_go.png</file>
+        <file>icons/be.png</file>
+        <file>icons/pl.png</file>
+        <file>icons/gb.png</file>
     </qresource>
     <qresource prefix="/application">
         <file>share/icons/hicolor/64x64/apps/vkaudiosync.png</file>

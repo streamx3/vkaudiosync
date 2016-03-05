@@ -127,7 +127,7 @@ void AppSettings::clearCookies()
 
 void AppSettings::clear()
 {
-    //--
+    // TODO Implement me!
 }
 
 void AppSettings::save()
@@ -140,7 +140,7 @@ void AppSettings::save()
 
 void AppSettings::restore()
 {
-    m_pCookieJar->restore();
+    m_pCookieJar->restore(); // TODO Consider removal of this function
 }
 
 void AppSettings::setCookieFile(QString path)

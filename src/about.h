@@ -19,7 +19,7 @@
 #ifndef ABOUT_H
 #define ABOUT_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 #include "ui_about.h"
 
 namespace Ui

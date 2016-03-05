@@ -23,17 +23,18 @@
 #define VK_APPLICATION_ID 2169954
 #endif
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QDesktopWidget>
 #include <QMessageBox>
 #include <QTextCodec>
 
-#include <QtWebKit>
+#include <QtWebKitWidgets/QWebView>
 #include <QtNetwork>
 
 #include <QString>
 #include <QObject>
 #include <QUrl>
+#include <QUrlQuery>
 #include <QByteArray>
 
 namespace VK
@@ -48,7 +49,9 @@ private://
     QString m_expire;
     QString m_lastError;
     QUrl m_authUrl;
+    QUrlQuery m_authUrlQuery;
     QUrl m_absUrl;
+    QUrlQuery m_absUrlQuery;
     QUrl m_redirectUri;
     bool m_isNeedLoadAbs;
     QNetworkCookieJar *m_pCookieJar;

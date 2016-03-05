@@ -268,16 +268,35 @@ void MainWindow::slotLanguageChanged(QString text)
 {
     Q_UNUSED(text);
 
+    enum LANG_ID{
+        LANG_ID_ENGLISH = 0,
+        LANG_ID_RUSSIAN,
+        LANG_ID_UKRAINIAN,
+        LANG_ID_POLISH,
+        LANG_ID_BELORUSIAN
+    };
+
     m_pAppSettings->setValue("/general/language",ui->langList->currentText());
     QString translationPath = m_pAppSettings->translationPath();
     if (QFile::exists(translationPath)) {
-        QString language = ui->langList->currentText();
+        int langId = ui->langList->currentIndex();
         QString filename;
 
-        if (language == "English") {
-            filename = "main_en.qm";
-        } else {
+        switch(langId) {
+        case LANG_ID_POLISH:
+            filename = "main_pl.qm";
+            break;
+        case LANG_ID_BELORUSIAN:
+            filename = "main_be.qm";
+            break;
+        case LANG_ID_UKRAINIAN:
+            filename = "main_uk.qm";
+            break;
+        case LANG_ID_RUSSIAN:
             filename = "main_ru.qm";
+            break;
+        default:
+            filename = "main_en.qm";
         }
 
         QString filePath = translationPath + QDir::separator() + filename;
@@ -293,6 +312,7 @@ void MainWindow::retranslateUi()
 {
     ui->retranslateUi(this);
     m_pAbout->retranslateUi();
+    m_pSynchService->slotModelItemChanged();
 }
 
 void MainWindow::slotAuthWindowOpened()

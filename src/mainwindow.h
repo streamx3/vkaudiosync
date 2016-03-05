@@ -19,7 +19,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QTranslator>
 
 #include "appsettings.h"
@@ -32,13 +32,13 @@
 #include "about.h"
 
 //use in impl.
-#include <QApplication>
-#include <QDesktopWidget>
-#include <QFileDialog>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QDesktopWidget>
+#include <QtWidgets/QFileDialog>
 #include <QPixmap>
 #include <QImage>
 #include <QLocale>
-#include <QStatusBar>
+#include <QtWidgets/QStatusBar>
 
 namespace Ui
 {

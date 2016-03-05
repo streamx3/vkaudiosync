@@ -33,11 +33,12 @@ VKService::VKService (QWidget *parent /*=0*/) : QObject(parent)
     m_webView->move((width - m_webView->width()) / 2 , (height - m_webView->height()) / 3);
 
     m_authUrl.setUrl("https://api.vk.com/oauth/authorize");
-    m_authUrl.addQueryItem("client_id", QString::number(VK_APPLICATION_ID).toAscii());
-    m_authUrl.addQueryItem("scope","audio,ads");
-    m_authUrl.addQueryItem("redirect_uri",m_redirectUri.toString());
-    m_authUrl.addQueryItem("display","popup");
-    m_authUrl.addQueryItem("response_type","token");
+    m_authUrlQuery.addQueryItem("client_id", QString::number(VK_APPLICATION_ID));
+    m_authUrlQuery.addQueryItem("scope","audio,ads");
+    m_authUrlQuery.addQueryItem("redirect_uri",m_redirectUri.toString());
+    m_authUrlQuery.addQueryItem("display","popup");
+    m_authUrlQuery.addQueryItem("response_type","token");
+    m_authUrl.setQuery(m_authUrlQuery);
 
     m_errorHandled = false;
     m_isNeedLoadAbs = false;
@@ -75,8 +76,10 @@ void VKService::loadAudioList()
 {
     if (m_lastError.isEmpty() && !m_token.isEmpty() && !m_expire.isEmpty()) {
         QUrl url("https://api.vk.com/method/audio.get.xml");
-        url.addQueryItem("access_token",m_token);
-        url.addQueryItem("redirect_uri",m_redirectUri.toString());
+        QUrlQuery urlq;
+        urlq.addQueryItem("access_token",m_token);
+        urlq.addQueryItem("redirect_uri",m_redirectUri.toString());
+        url.setQuery(urlq);
         QNetworkRequest request(url);
         m_networkManager->get(request);
     }
@@ -86,10 +89,12 @@ void VKService::loadProfile()
 {
     if (m_lastError.isEmpty() && !m_token.isEmpty() && !m_expire.isEmpty() && !m_uid.isEmpty()) {
         QUrl url("https://api.vk.com/method/getProfiles.xml");
-        url.addQueryItem("uids",m_uid);
-        url.addQueryItem("fields","uid, first_name, last_name, photo, photo_medium");
-        url.addQueryItem("access_token",m_token);
-        url.addQueryItem("redirect_uri",m_redirectUri.toString());
+        QUrlQuery urlq;
+        urlq.addQueryItem("uids",m_uid);
+        urlq.addQueryItem("fields","uid, first_name, last_name, photo, photo_medium");
+        urlq.addQueryItem("access_token",m_token);
+        urlq.addQueryItem("redirect_uri",m_redirectUri.toString());
+        url.setQuery(urlq);
         QNetworkRequest request(url);
         m_networkManager->get(request);
     }
@@ -118,12 +123,13 @@ void VKService::slotUrlChanged(const QUrl &url )
         return;
 
     urlAsString.replace('#','?');
-    QUrl chnagedUrl(urlAsString);
-    m_lastError = chnagedUrl.queryItemValue("error");
+    QUrl changedUrl(urlAsString);
+    QUrlQuery changedUrlQ(changedUrl);
+    m_lastError = changedUrlQ.queryItemValue("error");
     if (m_lastError.isEmpty()) {
-        m_token = chnagedUrl.queryItemValue("access_token");
-        m_expire = chnagedUrl.queryItemValue("expires_in");
-        m_uid = chnagedUrl.queryItemValue("user_id");
+        m_token = changedUrlQ.queryItemValue("access_token");
+        m_expire = changedUrlQ.queryItemValue("expires_in");
+        m_uid = changedUrlQ.queryItemValue("user_id");
         loadProfile();
         loadAudioList();
         if (m_isNeedLoadAbs)
@@ -147,7 +153,7 @@ void VKService::slotLoadFinished(bool ok)
         emit loginUnsuccess();
     } else if (m_webView->url().path() == m_authUrl.path())
         m_webView->show();
-    else if (m_webView->url().hasQueryItem("error") || m_webView->url().path() == QString("/blank.html"))
+    else if (QUrlQuery(m_webView->url()).hasQueryItem("error") || m_webView->url().path() == QString("/blank.html"))
         m_webView->hide();
      else
         m_webView->show();
@@ -184,7 +190,8 @@ void VKService::slotLoadAbsFinished(QNetworkReply *reply)
 void VKService::loadAbs()
 {
     m_absUrl.setUrl("https://api.vk.com/method/ads.getAccounts.xml");
-    m_absUrl.addQueryItem("redirect_uri",m_redirectUri.toString());
+    m_absUrlQuery.addQueryItem("redirect_uri",m_redirectUri.toString());
+    m_absUrl.setQuery(m_absUrlQuery);
 
     QNetworkRequest request(m_absUrl);
     m_networkManager->get(request);

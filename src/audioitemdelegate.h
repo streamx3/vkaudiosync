@@ -22,10 +22,10 @@
 #include <QPainter>
 #include <QTextLayout>
 #include <QTextLine>
-#include <QItemDelegate>
-#include <QProgressBar>
-#include <QCheckBox>
-#include <QApplication>
+#include <QtWidgets/QItemDelegate>
+#include <QtWidgets/QProgressBar>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QApplication>
 
 #include "audiolistmodel.h"
 

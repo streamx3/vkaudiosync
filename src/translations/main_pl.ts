@@ -1,114 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
-<context>
-    <name>About</name>
-    <message>
-        <source>Dialog</source>
-        <translatorcomment>About</translatorcomment>
-        <translation type="vanished">About</translation>
-    </message>
-    <message>
-        <source>Version:</source>
-        <translation type="vanished">Version:</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation type="vanished">About</translation>
-    </message>
-    <message>
-        <source>License</source>
-        <translation type="vanished">License</translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="vanished">Close</translation>
-    </message>
-</context>
-<context>
-    <name>AppSettings</name>
-    <message>
-        <source>Permision denied: Can&apos;t write </source>
-        <translation type="vanished">Permision denied: Can&apos;t write</translation>
-    </message>
-    <message>
-        <source>Permision denied: Can&apos;t read </source>
-        <translation type="vanished">Permision denied: Can&apos;t read</translation>
-    </message>
-</context>
-<context>
-    <name>AudioItemDelegate</name>
-    <message>
-        <source>Need Download</source>
-        <translation type="vanished">Need download</translation>
-    </message>
-    <message>
-        <source>Not Synchronized</source>
-        <translation type="vanished">Don&apos;t synchronize</translation>
-    </message>
-    <message>
-        <source>Complete</source>
-        <translation type="vanished">Complete</translation>
-    </message>
-</context>
-<context>
-    <name>MainWindow</name>
-    <message>
-        <source>VKAudioSync</source>
-        <translation type="vanished">VKAudioSync</translation>
-    </message>
-    <message>
-        <source>Remember</source>
-        <translation type="vanished">Remember me</translation>
-    </message>
-    <message>
-        <source>Украинский</source>
-        <translation type="vanished">Ukranian</translation>
-    </message>
-    <message>
-        <source>Login...</source>
-        <translation type="vanished">Login...</translation>
-    </message>
-    <message>
-        <source>Choose dir...</source>
-        <translation type="vanished">Choose dir...</translation>
-    </message>
-    <message>
-        <source>Synchronize</source>
-        <translation type="vanished">Download</translation>
-    </message>
-    <message>
-        <source>About...</source>
-        <translation type="vanished">About...</translation>
-    </message>
-    <message>
-        <source>Exit</source>
-        <translation type="vanished">Exit</translation>
-    </message>
-    <message>
-        <source>Login</source>
-        <translation type="vanished">Login</translation>
-    </message>
-    <message>
-        <source>Select directory</source>
-        <translation type="vanished">Select directory</translation>
-    </message>
-    <message>
-        <source>Logout</source>
-        <translation type="vanished">Logout</translation>
-    </message>
-</context>
+<TS version="2.1" language="pl_PL">
 <context>
     <name>VK::VKService</name>
     <message>
         <location filename="../vk/vkservice.cpp" line="68"/>
         <source>Wait...</source>
-        <translation>Please wait. Loaging login page...</translation>
+        <translation>Proszę czekać. Trwa pobieranie strony logowania...</translation>
     </message>
     <message>
         <location filename="../vk/vkservice.cpp" line="152"/>
         <source>Connect to vk com failed</source>
-        <translation>Connect to vk.com failed</translation>
+        <translation>Błąd połączenia z serwerem. Sprobuj ponownie</translation>
     </message>
 </context>
 <context>
@@ -126,32 +29,32 @@
     <message>
         <location filename="../ui/about.ui" line="59"/>
         <source>Version:</source>
-        <translation></translation>
+        <translation>Wersja:</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="81"/>
         <source>License: &lt;a href=&quot;http://www.gnu.org/copyleft/gpl.html&quot;&gt; GNU GPLv3 or latter&lt;/a&gt;</source>
-        <translation></translation>
+        <translation>Licencja: &lt;a href=&quot;http://www.gnu.org/copyleft/gpl.html&quot;&gt; GNU GPLv3 or latter&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="97"/>
         <source>Issues: &lt;a href=&quot;https://bitbucket.org/denis_medved/vkaudiosync/issues&quot;&gt;https://bitbucket.org/denis_medved/vkaudiosync/issues&lt;/a&gt;</source>
-        <translation></translation>
+        <translation>Problemy: &lt;a href=&quot;https://bitbucket.org/denis_medved/vkaudiosync/issues&quot;&gt;https://bitbucket.org/denis_medved/vkaudiosync/issues&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="107"/>
         <source>Source: &lt;a href=&quot;https://bitbucket.org/denis_medved/vkaudiosync/src&quot;&gt;https://bitbucket.org/denis_medved/vkaudiosync/src&lt;/a&gt;</source>
-        <translation>Source code: &lt;a href=&quot;https://bitbucket.org/denis_medved/vkaudiosync/src&quot;&gt;https://bitbucket.org/denis_medved/vkaudiosync/src&lt;/a&gt;</translation>
+        <translation>Source: &lt;a href=&quot;https://bitbucket.org/denis_medved/vkaudiosync/src&quot;&gt;https://bitbucket.org/denis_medved/vkaudiosync/src&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="117"/>
         <source>Author: Denis Medved (&lt;a href=&quot;http://mdenis.org&quot;&gt;mdenis.org&lt;/a&gt;)</source>
-        <translation></translation>
+        <translation>Autor: Denis Medved (&lt;a href=&quot;http://mdenis.org&quot;&gt;mdenis.org&lt;/a&gt;)</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="127"/>
         <source>Contact: &lt;a href=&quot;mailto:contact@mdenis.org&quot;&gt;contact@mdenis.org&lt;/a&gt;</source>
-        <translation>E-mail: &lt;a href=&quot;mailto:contact@mdenis.org&quot;&gt;contact@mdenis.org&lt;/a&gt;</translation>
+        <translation>Poczta: &lt;a href=&quot;mailto:contact@mdenis.org&quot;&gt;contact@mdenis.org&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/about.ui" line="137"/>
@@ -173,7 +76,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/about.ui" line="182"/>
         <source>Close</source>
-        <translation>Close</translation>
+        <translation>Zamknąć</translation>
     </message>
 </context>
 <context>
@@ -181,12 +84,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../appsettings.cpp" line="82"/>
         <source>Permision denied: Can&apos;t write </source>
-        <translation>Permision denied: Can&apos;t write</translation>
+        <translation>Błąd dostępu: brak praw zapisu</translation>
     </message>
     <message>
         <location filename="../appsettings.cpp" line="96"/>
         <source>Permision denied: Can&apos;t read </source>
-        <translation>Permision denied: Can&apos;t read</translation>
+        <translation>Błąd dostępu: nie ma prawa do odczytu</translation>
     </message>
 </context>
 <context>
@@ -194,22 +97,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../audioitemdelegate.cpp" line="170"/>
         <source>Need Download</source>
-        <translation>Need download</translation>
+        <translation>Potrzebujemy pobrać</translation>
     </message>
     <message>
         <location filename="../audioitemdelegate.cpp" line="174"/>
         <source>Need Upload</source>
-        <translation>Upload</translation>
+        <translation>Przekazać plik</translation>
     </message>
     <message>
         <location filename="../audioitemdelegate.cpp" line="178"/>
         <source>Not Synchronized</source>
-        <translation>Don&apos;t download</translation>
+        <translation>Nie pobierać</translation>
     </message>
     <message>
         <location filename="../audioitemdelegate.cpp" line="182"/>
         <source>Complete</source>
-        <translation>Completed</translation>
+        <translation>Skończone</translation>
     </message>
 </context>
 <context>
@@ -217,12 +120,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../audiolistmodel.cpp" line="226"/>
         <source>Complete.</source>
-        <translation>Completed.</translation>
+        <translation>Skończone.</translation>
     </message>
     <message>
         <location filename="../audiolistmodel.cpp" line="228"/>
         <source>Downloaded: %1. Left: %2.</source>
-        <translation>Downloaded: %1. Remaining: %2.</translation>
+        <translation>Pobrane:%1. Pozostało:%2.</translation>
     </message>
 </context>
 <context>
@@ -235,37 +138,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="125"/>
         <source>Remember</source>
-        <translation>Remember me</translation>
+        <translation>Pamiętać</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="205"/>
         <source>Login...</source>
-        <translation>Login...</translation>
+        <translation>Zaloguj Się...</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="225"/>
         <source>Choose dir...</source>
-        <translation>Choose folder...</translation>
+        <translation>Wybierz folder...</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="245"/>
         <source>Synchronize</source>
-        <translation>Download</translation>
+        <translation>Pobierać</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="262"/>
         <source>About...</source>
-        <translation>About...</translation>
+        <translation>O programie...</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="297"/>
         <source>Exit</source>
-        <translation>Exit</translation>
+        <translation>Zamknij</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="348"/>
         <source>Sort By</source>
-        <translation>Sort by</translation>
+        <translation>Sortuj według</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="368"/>
@@ -275,43 +178,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="373"/>
         <source>Artist</source>
-        <translation>artist</translation>
+        <translation>artysty</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="378"/>
         <source>Name</source>
-        <translation>name</translation>
+        <translation>tytułu</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="383"/>
         <source>Duration</source>
-        <translation>duration</translation>
+        <translation>czasu trwania</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="388"/>
         <source>Progress</source>
-        <translation>% downloaded</translation>
+        <translation>% sciagniecia</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="393"/>
         <source>Status</source>
-        <translation>status</translation>
+        <translation>stanu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="172"/>
         <location filename="../mainwindow.cpp" line="249"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Zaloguj się</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Select directory</source>
-        <translation>Select directory</translation>
+        <translation>Wybierz katalog</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="225"/>
         <source>Logout</source>
-        <translation>Logout</translation>
+        <translation>Wyloguj się</translation>
     </message>
 </context>
 </TS>
