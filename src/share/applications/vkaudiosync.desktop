@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=VkAudioSync
+Name[ru]=VkAudioSync
+GenericName=VKontakte audio synchronizer
+Exec=vkaudiosync
+Icon=/usr/share/icons/hicolor/64x64/apps/vkaudiosync.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;Qt

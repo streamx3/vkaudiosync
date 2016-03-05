@@ -1,0 +1,17 @@
+*.o
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.user
+build/
+bin/
+*.log
+PROJECT
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+Makefile*
+Makefile
+object_script*
+win/*
