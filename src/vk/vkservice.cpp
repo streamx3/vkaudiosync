@@ -38,6 +38,7 @@ VKService::VKService (QWidget *parent /*=0*/) : QObject(parent)
     m_authUrlQuery.addQueryItem("redirect_uri",m_redirectUri.toString());
     m_authUrlQuery.addQueryItem("display","popup");
     m_authUrlQuery.addQueryItem("response_type","token");
+
     m_authUrl.setQuery(m_authUrlQuery);
 
     m_errorHandled = false;

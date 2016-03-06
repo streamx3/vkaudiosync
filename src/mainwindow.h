@@ -30,6 +30,7 @@
 #include "audioitemdelegate.h"
 #include "profilemodel.h"
 #include "about.h"
+#include "proxydialog.h"
 
 //use in impl.
 #include <QtWidgets/QApplication>
@@ -54,6 +55,7 @@ class MainWindow : public QMainWindow
 private:
     Ui::MainWindow *ui;
     About *m_pAbout;
+    ProxyDialog *m_pProxyDialog;
 
     VK::VKService *m_pVkService;
     AudioListModel *m_pAudioModel;
@@ -94,6 +96,7 @@ public:
     void slotUpdateStatusBar(const QString status);
     void slotShowAbs();
     void slotSortChanged(int option);
+    void slotProxyBtnClicked();
 };
 }
 

@@ -20,6 +20,7 @@
         <file>icons/be.png</file>
         <file>icons/pl.png</file>
         <file>icons/gb.png</file>
+        <file>icons/proxy.png</file>
     </qresource>
     <qresource prefix="/application">
         <file>share/icons/hicolor/64x64/apps/vkaudiosync.png</file>

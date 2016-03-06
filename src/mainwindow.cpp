@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent /*=0*/) :
     QApplication::instance()->installTranslator(m_pTranslator);
 
     m_pAbout = new About(this);
+    m_pProxyDialog = new ProxyDialog(this);
     m_pAppSettings = new AppSettings(this);
     m_pVkService = new VK::VKService(this);
     m_pAudioModel = new AudioListModel(this);
@@ -55,6 +56,9 @@ MainWindow::MainWindow(QWidget *parent /*=0*/) :
     );
     connect(ui->aboutButton,SIGNAL(clicked()),
             this,SLOT(slotAbout())
+    );
+    connect(ui->proxyButton,SIGNAL(clicked()),
+            this,SLOT(slotProxyBtnClicked())
     );
     connect(ui->exitButton,SIGNAL(clicked()),
             this,SLOT(slotExit())
@@ -106,6 +110,7 @@ MainWindow::MainWindow(QWidget *parent /*=0*/) :
 
     m_pAppSettings->load();
     m_pVkService->setCookieJar(m_pAppSettings->cookieJar());
+    m_pProxyDialog->setSettings(m_pAppSettings);
 
     m_logined = false;
 
@@ -344,5 +349,10 @@ void MainWindow::slotSortChanged(int option)
 {
     m_pAppSettings->setValue("sort", QVariant(option));
     m_pAudioModel->setSortBy(option);
+}
+
+void MainWindow::slotProxyBtnClicked()
+{
+    m_pProxyDialog->show();
 }
 }

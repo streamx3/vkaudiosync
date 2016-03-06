@@ -56,11 +56,13 @@ HEADERS += \
         profilemodel.h \
         about.h \
         appcookiejar.h \
-        audiolistview.h
+        audiolistview.h \
+    proxydialog.h
 
 FORMS += \
         ui/mainwindow.ui \
-        ui/about.ui
+        ui/about.ui \
+        ui/proxydialog.ui
 
 SOURCES += \
         audioitemdelegate.cpp \
@@ -75,7 +77,8 @@ SOURCES += \
         profilemodel.cpp \
         about.cpp \
         appcookiejar.cpp \
-        audiolistview.cpp
+        audiolistview.cpp \
+    proxydialog.cpp
 
 
 OTHER_FILES += \

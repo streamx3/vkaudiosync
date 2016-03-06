@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>427</height>
+    <height>470</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -264,6 +264,23 @@
            <property name="icon">
             <iconset resource="../icons.qrc">
              <normaloff>:/famfam/icons/book.png</normaloff>:/famfam/icons/book.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="proxyButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Proxy</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>:/famfam/icons/proxy.png</normaloff>:/famfam/icons/proxy.png</iconset>
            </property>
           </widget>
          </item>
